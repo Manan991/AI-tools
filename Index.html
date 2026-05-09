@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free AI Tools Directory</title>
+    <style>
+        /* Modern CSS Styling */
+        :root {
+            --primary: #3b82f6;
+            --secondary: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --text: #334155;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--light);
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--dark), #334155);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+            letter-spacing: -1px;
+        }
+
+        p.subtitle {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: -2rem auto 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        /* Filter Buttons */
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.5rem;
+            border: 2px solid transparent;
+            border-radius: 30px;
+            background-color: #f1f5f9;
+            color: var(--text);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover {
+            background-color: #e2e8f0;
+        }
+
+        .filter-btn.active {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Grid Layout for AI Tools */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Tool Cards */
+        .card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+            border-color: #cbd5e1;
+        }
+
+        .category-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            background: #eff6ff;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+        }
+
+        .tool-name {
+            font-size: 1.4rem;
+            margin: 0 0 0.8rem 0;
+            color: var(--dark);
+        }
+
+        .tool-desc {
+            flex-grow: 1;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .tool-link {
+            display: block;
+            padding: 0.8rem 1.2rem;
+            background-color: var(--secondary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .tool-link:hover {
+            background-color: #059669;
+        }
+
+        /* Utility class to hide elements */
+        .hidden {
+            display: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Free AI Tools Directory</h1>
+        <p class="subtitle">Discover the best free and freemium Artificial Intelligence tools for writing, coding, image generation, and more.</p>
+    </header>
+
+    <div class="container">
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterSelection('all')">All Tools</button>
+            <button class="filter-btn" onclick="filterSelection('text')">Text & Chat</button>
+            <button class="filter-btn" onclick="filterSelection('image')">Image Generation</button>
+            <button class="filter-btn" onclick="filterSelection('audio')">Audio & Video</button>
+            <button class="filter-btn" onclick="filterSelection('coding')">Coding & Dev</button>
+        </div>
+
+        <div class="grid">
+            
+            <div class="card item text">
+                <span class="category-tag">Text & Chat</span>
+                <h2 class="tool-name">ChatGPT (Free)</h2>
+                <p class="tool-desc">OpenAI's powerful conversational AI. Excellent for brainstorming, writing emails, essays, and answering complex questions.</p>
+                <a href="https://chat.openai.com" target="_blank" class="tool-link">Visit Website</a>
+            </div>
+
+            <div class="card item text">
+                <span class="category-tag">Text & Chat</span>
+                <h2 class="tool-name">Google Gemini</h2>
+                <p class="tool-desc">Google's highly capable AI assistant that can reason across text, images, and code. Features real-time web access.</p>
+                <a href="https://gemini.google.com" target="_blank" class="tool-link">Visit Website</a>
+            </div>
+
+            <div class="card item text">
+                <span class="category-tag">Text & Chat</span>
+                <h2 class="tool-name">Claude</h2>
+                <p class="tool-desc">Anthropic's AI known for its large context window, highly natural writing style, and deep analytical capabilities.</p>
+                <a href="https://claude.ai" target="_blank" class="tool-link">Visit Website</a>
+            </div>
+
+            <div class="card item image">
+                <span class="category-tag">Image Generation</span>
+                <h2 class="tool-name">Copilot Designer</h2>
+                <p class="tool-desc">Powered by DALL-E 3, Microsoft's image creator allows you to generate highly accurate and creative images from text for free.</p>
+                <a href="https://copilot.microsoft.com/images/create" target="_blank" class="tool-link">Visit Website</a>
+            </div>
+
+            <div class="card item image">
+                <span class="category-tag">Image Generation</span>
+                <h2 class="tool-name">Leonardo.Ai</h2>
+                <p class="tool-desc">A feature-rich generative AI platform for creating stunning visual assets. Offers a very generous daily allowance of free tokens.</p>
+                <a href="https://leonardo.ai" target="_blank" class="tool-link">Visit Website</a>
+            </div>
+
+            <div class="card item image">
+                <span class="category-tag">Image Generation</span>
+                <h2 class="tool-name">Craiyon</h2>
+                <p class="tool-desc">Formerly known as DALL-E mini, Craiyon is a completely free, ad-supported AI model that can draw images from any text prompt.</p>
+                <a href="https://www.craiyon.com/" target="_blank" class="tool-link">Visit Website</a>
+            </div>
+
+            <div class="card item audio">
+                <span class="category-tag">Audio & Video</span>
+                <h2 class="tool-name">Suno AI</h2>
+                <p class="tool-desc">Generate full, high-quality songs with vocals and instrumentation just by typing a description. Offers free daily credits.</p>
+                <a href="https://suno.com" target="_blank" class="tool-link">Visit Website</a>
+            </div>
+
+            <div class="card item audio">
+                <span class="category-tag">Audio & Video</span>
+                <h2 class="tool-name">ElevenLabs (Free Tier)</h2>
+                <p class="tool-desc">The industry standard for hyper-realistic AI text-to-speech voice generation. Great for voiceovers and content creation.</p>
+                <a href="https://elevenlabs.io" target="_blank" class="tool-link">Visit Website</a>
+            </div>
+
+            <div class="card item text">
+                <span class="category-tag">Text & Chat</span>
+                <h2 class="tool-name">Perplexity AI</h2>
+                <p class="tool-desc">An AI-powered search engine that browses the web in real-time to provide fully cited, accurate answers to your questions.</p>
+                <a href="https://www.perplexity.ai" target="_blank" class="tool-link">Visit Website</a>
+            </div>
+
+            <div class="card item coding">
+                <span class="category-tag">Coding & Dev</span>
+                <h2 class="tool-name">Hugging Face Chat</h2>
+                <p class="tool-desc">An open-source alternative to ChatGPT, allowing you to try out and interact with various top-tier open-source LLMs (like Llama 3) for free.</p>
+                <a href="https://huggingface.co/chat/" target="_blank" class="tool-link">Visit Website</a>
+            </div>
+
+            <div class="card item coding">
+                <span class="category-tag">Coding & Dev</span>
+                <h2 class="tool-name">Blackbox AI</h2>
+                <p class="tool-desc">An AI coding assistant designed specifically to help developers write code, find snippets, and resolve bugs faster.</p>
+                <a href="https://www.blackbox.ai/" target="_blank" class="tool-link">Visit Website</a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>Built with HTML, CSS, and Vanilla JavaScript.</p>
+    </footer>
+
+    <script>
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("item");
+            
+            // Handle active button styling
+            var btns = document.getElementsByClassName("filter-btn");
+            for (i = 0; i < btns.length; i++) {
+                btns[i].classList.remove("active");
+            }
+            event.currentTarget.classList.add("active");
+
+            // Handle the display of items
+            if (c == "all") {
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "flex";
+                }
+                return;
+            }
+            
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+                if (x[i].className.indexOf(c) > -1) {
+                    x[i].style.display = "flex";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
